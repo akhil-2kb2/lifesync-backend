@@ -1,31 +1,29 @@
 # 📂 Lifesync Backend - File Upload API
 
-This is a Spring Boot project that provides a secure API endpoint for uploading files using `multipart/form-data`.  
-The application uses JWT Authentication for securing endpoints and stores uploaded files (handling can be customized).
+A modern Spring Boot application offering a secure and efficient API for file uploads using `multipart/form-data`.  
+The backend is fortified with JWT Authentication and supports customizable file storage options.
 
 ---
 
 ## 🚀 Features
 
-- Upload files via REST API
-- Secure upload endpoint using JWT token
-- Proper error handling for unsupported content types
-- Integrated with MySQL via Spring Data JPA
-- Spring Boot 3.4.5
-- Hibernate ORM (6.6.13.Final)
-- HikariCP connection pooling
+- Seamless file uploads via REST API
+- JWT-secured endpoints for enhanced security
+- Robust error handling for invalid requests
+- MySQL integration with Spring Data JPA
+- Built with the latest Spring Boot (3.4.5)
+- High-performance Hibernate ORM (6.6.13.Final)
+- Optimized database connections using HikariCP
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Java 17
-- Spring Boot
-- Spring Web
-- Spring Security (JWT Authentication)
-- Spring Data JPA
-- MySQL Database
-- Maven
+- **Language:** Java 17
+- **Framework:** Spring Boot
+- **Modules:** Spring Web, Spring Security (JWT), Spring Data JPA
+- **Database:** MySQL
+- **Build Tool:** Maven
 
 ---
 
@@ -38,7 +36,9 @@ The application uses JWT Authentication for securing endpoints and stores upload
    cd lifesync-backend
    ```
 
-2. **Configure `application.properties` or `application.yml`:**
+2. **Configure application properties:**
+
+   Update `src/main/resources/application.properties` or `application.yml`:
 
    ```properties
    server.port=8080
@@ -50,7 +50,7 @@ The application uses JWT Authentication for securing endpoints and stores upload
    spring.jpa.hibernate.ddl-auto=update
    spring.jpa.show-sql=true
 
-   # JWT secret and expiration
+   # JWT Configuration
    jwt.secret=your_jwt_secret_key
    jwt.expirationMs=3600000
    ```
@@ -62,7 +62,7 @@ The application uses JWT Authentication for securing endpoints and stores upload
    mvn spring-boot:run
    ```
 
-4. **Server will start at:**
+4. **Access the server:**
 
    ```
    http://localhost:8080
@@ -72,7 +72,7 @@ The application uses JWT Authentication for securing endpoints and stores upload
 
 ## 🔐 Authentication
 
-- All API requests must include a valid JWT Token in the header.
+- All API requests require a valid JWT token in the `Authorization` header.
 - Example Header:
 
    ```
@@ -83,9 +83,9 @@ The application uses JWT Authentication for securing endpoints and stores upload
 
 ## 📤 Upload API Documentation
 
-| Method | URL                          | Description        | Auth Required |
-|:-------|:------------------------------|:-------------------|:-------------|
-| POST   | `/api/files/upload`            | Upload a file      | Yes          |
+| **Method** | **Endpoint**               | **Description**   | **Auth Required** |
+|:-----------|:---------------------------|:------------------|:------------------|
+| `POST`     | `/api/files/upload`        | Upload a file     | ✅ Yes            |
 
 ### Request Example (curl)
 
@@ -99,13 +99,13 @@ curl -X POST http://localhost:8080/api/files/upload \
 
 ### Expected Responses
 
-| Status Code | Description |
-|:------------|:------------|
-| `200 OK`    | File uploaded successfully |
-| `400 Bad Request` | Request is not multipart/form-data |
-| `401 Unauthorized` | Invalid or missing JWT token |
-| `415 Unsupported Media Type` | Incorrect Content-Type |
-| `500 Internal Server Error` | Server side error |
+| **Status Code** | **Description**                     |
+|:----------------|:------------------------------------|
+| `200 OK`        | File uploaded successfully          |
+| `400 Bad Request` | Invalid or missing request format |
+| `401 Unauthorized` | Missing or invalid JWT token     |
+| `415 Unsupported Media Type` | Unsupported file type |
+| `500 Internal Server Error` | Unexpected server error |
 
 ---
 
@@ -121,7 +121,7 @@ public class FileController {
         consumes = MediaType.MULTIPART_FORM_DATA_VALUE
     )
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
-        // Handle file saving logic
+        // TODO: Implement file saving logic
         return ResponseEntity.ok("File uploaded successfully!");
     }
 }
@@ -131,20 +131,29 @@ public class FileController {
 
 ## 📝 Notes
 
-- Ensure your client (curl/Postman) sends `multipart/form-data` requests.
-- Always include the `Authorization: Bearer` header.
-- Exception handlers should be added for better error reporting (optional).
+- Ensure your client (e.g., curl, Postman) sends requests with `multipart/form-data`.
+- Always include the `Authorization: Bearer` header in API requests.
+- Consider adding global exception handlers for better error reporting.
 
 ---
 
 ## 🤝 Contributing
 
-Feel free to open issues or submit pull requests if you'd like to contribute!
+We welcome contributions! Feel free to open issues or submit pull requests to improve this project.
 
 ---
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🌟 What's Next?
+
+- Add support for file type validation and size limits.
+- Implement cloud storage integration (e.g., AWS S3, Azure Blob).
+- Enhance API documentation with Swagger/OpenAPI.
+- Introduce unit and integration tests for better reliability.
 
 ---
