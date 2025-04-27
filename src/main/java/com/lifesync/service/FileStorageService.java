@@ -76,7 +76,6 @@ public class FileStorageService {
     }
 
     public void deleteFile(Long id) {
-        User user = getCurrentUser();
         FileStorage fileStorage = fileStorageRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("File not found"));
 

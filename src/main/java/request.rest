@@ -104,3 +104,5 @@
 # -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2Nzc3NTcsImV4cCI6MTc0NTY4MTM1N30.fzmTu_p0w1UdSl9t3hPBFHc154Wwpgt8zWXMbSNESDGCua6cBgdmFyY9zQyeAjyftSbRDzxm4F_nx-FTfGTzMg" \
 # -F "file=@/Users/akhileshyadav/Pictures/test.png"
 
+
+//
