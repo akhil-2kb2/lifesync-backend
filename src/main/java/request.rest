@@ -1,0 +1,105 @@
+# curl -X POST http://localhost:8080/api/auth/register \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "name": "Akhilesh",
+#     "email": "akhil@test2.com",
+#     "password": "123456"
+# }'
+
+
+# curl -X POST http://localhost:8080/api/auth/login \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "email": "akhil@test2.com",
+#     "password": "123456"
+# }'
+
+
+# curl -X POST http://localhost:8080/api/tasks \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2Njg5MzIsImV4cCI6MTc0NTY3MjUzMn0.ZJazHKOGeyUFzmIrPXr-wPaHjlSbOY2eGP-_qF40aDo6Tr9q6yqIYk0QpPlasi6-xq1qZRR6hWDqtyCvKmFWdQ" \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "title": "Complete LifeSync ",
+#     "description": "Finish backend task module",
+#     "dueDate": "2025-04-27",
+#     "status": "PENDING"
+# }'
+
+# curl -X POST http://localhost:8080/api/tasks \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "title": "Complete the Event Module",
+#     "description": "Finish event module",
+#     "dueDate": "2025-04-27",
+#     "status": "PENDING"
+# }'
+   
+
+# curl -X GET http://localhost:8080/api/tasks \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json"
+
+# curl -X PUT http://localhost:8080/api/tasks/2 \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "title": "Event Module Completed",
+#     "description": "Task module finished",
+#     "dueDate": "2025-04-28",
+#     "status": "COMPLETED"
+# }'
+
+# curl -X POST http://localhost:8080/api/habits \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "habitName": "Drink Water",
+#     "frequency": "DAILY"
+# }'
+
+# curl -X GET http://localhost:8080/api/habits \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json"
+
+# curl -X PATCH http://localhost:8080/api/habits/1/track \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json"
+
+# curl -X DELETE http://localhost:8080/api/habits/1 \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json"
+
+# curl -X POST http://localhost:8080/api/goals \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "goalTitle": "Complete LifeSync Project",
+#     "description": "Finish backend, frontend and launch LifeSync app",
+#     "targetDate": "2025-05-31",
+#     "progressPercent": 10
+# }'
+
+# curl -X GET http://localhost:8080/api/goals \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json"
+
+
+# curl -X PUT http://localhost:8080/api/goals/1 \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g" \
+# -H "Content-Type: application/json" \
+# -d '{
+#     "goalTitle": "Launch LifeSync Officially",
+#     "description": "Backend complete, Frontend ready, Marketing started",
+#     "targetDate": "2025-06-15",
+#     "progressPercent": 50
+# }'
+
+
+# curl -X DELETE http://localhost:8080/api/goals/1 \
+# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g " \
+# -H "Content-Type: application/json"
+
+curl -X POST http://localhost:8080/api/files/upload \
+-H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2Nzc3NTcsImV4cCI6MTc0NTY4MTM1N30.fzmTu_p0w1UdSl9t3hPBFHc154Wwpgt8zWXMbSNESDGCua6cBgdmFyY9zQyeAjyftSbRDzxm4F_nx-FTfGTzMg" \
+-F "file=@/Users/akhileshyadav/Pictures/test.png"
