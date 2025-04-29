@@ -100,9 +100,9 @@
 # -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2NzM3OTMsImV4cCI6MTc0NTY3NzM5M30.X9iwAcsSdv8uZdQrQqscLSPw1mSVKLKzENy7PSvuQzzKXij9YpJccW54G9LJ_3f6Db1D_AkeMeNBDMkF-qPq9g " \
 # -H "Content-Type: application/json"
 
-# curl -X POST http://localhost:8080/api/files/upload \
-# -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU2Nzc3NTcsImV4cCI6MTc0NTY4MTM1N30.fzmTu_p0w1UdSl9t3hPBFHc154Wwpgt8zWXMbSNESDGCua6cBgdmFyY9zQyeAjyftSbRDzxm4F_nx-FTfGTzMg" \
-# -F "file=@/Users/akhileshyadav/Pictures/test.png"
+curl -X POST http://localhost:8080/api/files/upload \
+-H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbEB0ZXN0Mi5jb20iLCJpYXQiOjE3NDU4MTI2NDYsImV4cCI6MTc0NTgxNjI0Nn0.CqIoCF-uvfbwGcUyKuDC0LZFDC2kpAjONEcGFxLOIDX9QbmS_SPfY0oh_9ME9DzcF-kWroSeb0grqJf0fI4ViA" \
+-F "file=@/Users/akhileshyadav/Pictures/test.png"
 
 
 //
